@@ -19,7 +19,7 @@ Linear regression
 
 # Project Description
 
-<img src="/images/diamonds.png" align="center" width="100%"/>
+<img src="/images/diamonds.jpg" align="center" width="100%"/>
 
 Using the data from previous diamonds information predict the price of a list of diamonds that cointains:
 
