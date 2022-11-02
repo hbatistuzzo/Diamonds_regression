@@ -36,32 +36,41 @@ Table: Width of top of diamond relative to widest point(43-95)
 
 A pairplot of these attributes yields:
 
-<img src="/images/pairplot.png" align="center" width="100%"/>
+<img src="/images/pairplot.png" align="center" width="75%"/>
 
 Which can also be visualized of this heatmap of correlations:
 
-<img src="/images/heatmap.png" align="center" width="100%"/>
+<img src="/images/heatmap.png" align="center" width="75%"/>
 
 ## Steps
 1 - Price predicted as the mean of prices from diamonds.csv(3980)
 
+
 2 - Price predicted using carat as the only variable from diamonds.csv(1605)
+
 
 3 - Price predicted using carat and depth variables from diamonds.csv(1598)
 
+
 4 - Price predicted using carat and table variables from diamonds.csv(1595)
+
 
 5 - Price predicted using carat,table and depth variables from diamonds.csv(1583)
 
+
 6 - Price predicted using carat,table,depth and clarity variables from diamonds.csv(1217); Cut does not seen to influence the model
+
 
 7 - Price predicted using carat,table,depth, clarity and color variables from diamonds.csv(987); Cut does not seen to influence the model
 
+
 8 - Price predicted using carat,table,depth,x, clarity and color variables from diamonds.csv(709); Cut does not seen to influence the model
 
+
 X was the missing piece in this linear regression model
+
 
 9 - Price predicted using carat,table,depth,x, clarity , color and cut(grouped by Fair and Good) variables from diamonds.csv(688)
 
 # Conclusion
-Using most of the data of the original DataFrame impoved significantly the preciseness of the model.
+Using most of the data of the original DataFrame significantly improved the preciseness of the model.
