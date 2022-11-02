@@ -2,7 +2,7 @@
  
 # Project objective
 
-Predict the price of the diamonds in 'rick_diamonds.csv' using the information from 'diamonds.csv' through a linear regression model.
+Predict the price of the diamonds in `rick_diamonds.csv` using the information from `diamonds.csv` through a linear regression model.
 
 ## Methods
 Linear regression
