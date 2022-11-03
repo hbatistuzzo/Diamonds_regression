@@ -1,8 +1,15 @@
 # Diamonds_Henrique
- 
+
+![GitHub top language](https://img.shields.io/github/languages/top/hbatistuzzo/Diamonds_Henrique)
+![GitHub commit activity](https://img.shields.io/github/commit-activity/m/hbatistuzzo/Diamonds_Henrique)
+![GitHub code size in bytes](https://img.shields.io/github/languages/code-size/hbatistuzzo/Diamonds_Henrique)
+![GitHub last commit](https://img.shields.io/github/last-commit/hbatistuzzo/Diamonds_Henrique)
+
 # Project objective
 
 Predict the price of the diamonds in `rick_diamonds.csv` using the information from `diamonds.csv` through a linear regression model.
+
+---
 
 ## Methods
 Linear regression
@@ -16,6 +23,8 @@ Linear regression
 	- Matplotlib 3.5.3
 	- SQLAlchemy 1.4.42
 	- Scikit-learn 1.1
+
+---
 
 # Project Description
 
@@ -41,6 +50,8 @@ A pairplot of these attributes yields:
 Which can also be visualized of this heatmap of correlations:
 
 <img src="/images/heatmap.png" align="center" width="75%"/>
+
+---
 
 ## Steps
 1 - Price predicted as the mean of prices from diamonds.csv(3980)
@@ -71,6 +82,8 @@ X was the missing piece in this linear regression model
 
 
 9 - Price predicted using carat,table,depth,x, clarity , color and cut(grouped by Fair and Good) variables from diamonds.csv(688)
+
+---
 
 # Conclusion
 Using most of the data of the original DataFrame significantly improved the preciseness of the model.
