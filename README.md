@@ -5,7 +5,7 @@
 ![GitHub code size in bytes](https://img.shields.io/github/languages/code-size/hbatistuzzo/Diamonds_Henrique)
 ![GitHub last commit](https://img.shields.io/github/last-commit/hbatistuzzo/Diamonds_Henrique)
 
-# Project objective
+## Project objective
 
 Predict the price of the diamonds in `rick_diamonds.csv` using the information from `diamonds.csv` through a linear regression model.
 
@@ -13,6 +13,8 @@ Predict the price of the diamonds in `rick_diamonds.csv` using the information f
 
 ## Methods
 Linear regression
+
+---
 
 ## Technologies
 - Python 3.8.3
@@ -26,7 +28,7 @@ Linear regression
 
 ---
 
-# Project Description
+## Project Description
 
 <img src="/images/diamonds.jpg" align="center" width="100%"/>
 
