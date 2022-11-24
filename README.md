@@ -32,7 +32,7 @@ of 5,000 diamonds, thus setting up a classic regression problem. Specificaly, th
 
 ## Dataset Description
 
-The list of diamonds that cointains the following information:
+The list of diamonds contains the following information:
 
 - Price: Price in US dollars
 - Carat: Weight of the diamond
@@ -45,8 +45,7 @@ The list of diamonds that cointains the following information:
 - Depth:Total depth percentage = z/mean(x,y) = 2*z/(x+y)(43-79)
 - Table: Width of top of diamond relative to widest point(43-95)
 
-
-<img src="/images/diamonds.jfif" align="center" width="60%"/>
+<img src="images/diamonds.jfif" align="center" width="60%"/>
 
 A pairplot of these attributes yields:
 
