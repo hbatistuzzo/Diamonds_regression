@@ -50,8 +50,7 @@ The list of diamonds contains the following information:
 
 <p align="center"><img src="images/diamonds.jfif" alt="fuller"  width="60%"></p>
 
-The dataset itself doesn't need any cleaning other than the removal of a few lines where dimensions (y or x) are set to zero, which is physically impossible.
-- Univariate Analysis for statistical description yields
+The dataset itself doesn't need any cleaning other than the removal of a few lines where dimensions (y or x) are set to zero, which is physically impossible. An Univariate Analysis for statistical description yields
 
 |       |        carat |        depth |        table |        price |            x |            y |            z |
 |------:|-------------:|-------------:|-------------:|-------------:|-------------:|-------------:|-------------:|
