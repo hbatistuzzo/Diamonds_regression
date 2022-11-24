@@ -54,6 +54,7 @@ The dataset itself doesn't need any cleaning other than the removal of a few lin
 which yields:
 
 <p align="center">
+
 |       |    carat |     depth |     table |     price |         x |         y |        z |
 |------:|---------:|----------:|----------:|----------:|----------:|----------:|---------:|
 | carat | 1.000000 |  0.027074 |  0.181688 |  0.922186 |  0.975152 |  0.949687 | 0.951824 |
@@ -63,6 +64,7 @@ which yields:
 |     x | 0.975152 | -0.025858 |  0.195367 |  0.885019 |  1.000000 |  0.972447 | 0.969336 |
 |     y | 0.949687 | -0.029903 |  0.183362 |  0.864059 |  0.972447 |  1.000000 | 0.948768 |
 |     z | 0.951824 |  0.094344 |  0.150646 |  0.860247 |  0.969336 |  0.948768 | 1.000000 |
+
 </p>
 
 Which can also be visualized as a heatmap of correlations:
