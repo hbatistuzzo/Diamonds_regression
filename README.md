@@ -65,6 +65,8 @@ The dataset itself doesn't need any cleaning other than the removal of a few lin
 
 - "Price", as expected, is skewed. There are few diamonds which are worth too much and a lot of diamonds with reasonably small prices.
 
+<p align="center"><img src="images/prices.png" alt="heat"  width="75%"></p>
+
 Bivariate Analysis: a first tentative step is to analyze the correlation matrix between the variables, which yields:
 
 <p align="center">
@@ -89,6 +91,10 @@ The price of a diamond has a direct correlation with its dimensions (and hence w
 There are other relevant features which also influence its price, such as color, clarity and cut. A pairplot of these attributes can be useful in inspecting these relations:
 
 <p align="center"><img src="images/output.png" alt="pp"  width="75%"></p>
+
+---
+
+## Modelling
 
 
 
