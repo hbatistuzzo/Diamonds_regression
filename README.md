@@ -16,6 +16,9 @@ of 5,000 diamonds, thus setting up a classic regression problem. Specificaly, th
 - to infer which characteristics are more likely to influence a diamond's price
 - to progressively train and test a regression model until its accuracy meet a certain standard (defined by the RMSE)
 
+
+<p align="center"><img src="images/challenge_objectives.png" alt="full"  width="60%"></p>
+
 ---
 
 ## Technologies
