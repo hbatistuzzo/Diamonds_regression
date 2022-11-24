@@ -65,7 +65,7 @@ The dataset itself doesn't need any cleaning other than the removal of a few lin
 
 - "Price", as expected, is skewed. There are few diamonds which are worth too much and a lot of diamonds with reasonably small prices.
 
-<p align="center"><img src="images/prices.png" alt="heat"  width="75%"></p>
+<p align="center"><img src="images/prices.png" alt="prices"  width="100%"></p>
 
 Bivariate Analysis: a first tentative step is to analyze the correlation matrix between the variables, which yields:
 
