@@ -7,12 +7,11 @@
 
 ## Project objective
 
-Predict the price of the diamonds in `rick_diamonds.csv` using the information from `diamonds.csv` through a linear regression model.
-
----
-
-## Methods
-Linear regression
+This project is based on a [somewhat classic kaggle dataset from 2016](https://www.kaggle.com/datasets/shivam2503/diamonds) used to explain introductory level machine learning.
+Given a historic dataset with over 54,000 diamonds prices (`diamonds.csv`) and their characteristics, we are tasked by our client (Rick Harrison from _Pawn Stars_) to estimate the price of his own list (`rick_diamonds.csv`)
+of 5,000 diamonds, thus setting up a classic regression problem. Specificaly, the goals are:
+- to infer which characteristics are more likely to influence a diamond's price
+- to progressively train and test a regression model until its accuracy meet a certain standard (defined by the RMSE)
 
 ---
 
@@ -28,11 +27,11 @@ Linear regression
 
 ---
 
-## Project Description
+## Dataset Description
 
-<img src="/images/diamonds.jpg" align="center" width="100%"/>
+<img src="/images/diamonds.jpg" align="center" width="60%"/>
 
-Using the data from previous diamonds information predict the price of a list of diamonds that cointains:
+The list of diamonds that cointains the following information:
 
 Price: Price in US dollars
 Carat: Weight of the diamond
@@ -44,6 +43,9 @@ y:Width in mm
 z:Depth in mm
 Depth:Total depth percentage = z/mean(x,y) = 2*z/(x+y)(43-79)
 Table: Width of top of diamond relative to widest point(43-95)
+
+
+<img src="/images/diamonds.jfif" align="center" width="60%"/>
 
 A pairplot of these attributes yields:
 
