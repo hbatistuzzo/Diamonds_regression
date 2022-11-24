@@ -53,8 +53,8 @@ The list of diamonds contains the following information:
 The dataset itself doesn't need any cleaning other than the removal of a few lines where dimensions (y or x) are set to zero, which is physically impossible. A first tentative step is to analyze the correlation matrix between the variables,
 which yields:
 
-| carat |    depth |     table |     price |         x |         y |         z |          |
-|------:|---------:|----------:|----------:|----------:|----------:|----------:|----------|
+|       |    carat |     depth |     table |     price |         x |         y |        z |
+|------:|---------:|----------:|----------:|----------:|----------:|----------:|---------:|
 | carat | 1.000000 |  0.027074 |  0.181688 |  0.922186 |  0.975152 |  0.949687 | 0.951824 |
 | depth | 0.027074 |  1.000000 | -0.297123 | -0.012037 | -0.025858 | -0.029903 | 0.094344 |
 | table | 0.181688 | -0.297123 |  1.000000 |  0.127832 |  0.195367 |  0.183362 | 0.150646 |
