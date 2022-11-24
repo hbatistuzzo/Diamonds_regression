@@ -14,7 +14,7 @@ of 5,000 diamonds, thus setting up a classic regression problem. Specificaly, th
 
 
 - to infer which characteristics are more likely to influence a diamond's price
-- to progressively train and test a regression model until its accuracy meet a certain standard (defined by the RMSE)
+- to progressively train and test a regression model until its accuracy meet a certain standard (defined by the RMSE). Rick’s goal is to obtain an average error below 900 dollars.
 
 
 <p align="center"><img src="images/challenge_objectives.png" alt="full"  width="60%"></p>
@@ -33,9 +33,9 @@ of 5,000 diamonds, thus setting up a classic regression problem. Specificaly, th
 
 ---
 
-## Dataset Description
+## Dataset Description and Inspection:
 
-The list of diamonds contains the following information:1:41 PM 11/24/2022
+The list of diamonds contains the following information:
 
 - Price: Price in US dollars
 - Carat: Weight of the diamond
@@ -48,15 +48,29 @@ The list of diamonds contains the following information:1:41 PM 11/24/2022
 - Depth:Total depth percentage = z/mean(x,y) = 2*z/(x+y)(43-79)
 - Table: Width of top of diamond relative to widest point(43-95)
 
-<p align="center"><img src="images/diamonds.jfif" alt="full"  width="60%"></p>
+<p align="center"><img src="images/diamonds.jfif" alt="fuller"  width="60%"></p>
 
-A pairplot of these attributes yields:
+The dataset itself doesn't need any cleaning other than the removal of a few lines where dimensions (y or x) are set to zero, which is physically impossible. A first tentative step is to analyze the correlation matrix between the variables,
+which yields:
 
-<img src="/images/pairplot.png" align="center" width="75%"/>
+| carat |    depth |     table |     price |         x |         y |         z |          |
+|------:|---------:|----------:|----------:|----------:|----------:|----------:|----------|
+| carat | 1.000000 |  0.027074 |  0.181688 |  0.922186 |  0.975152 |  0.949687 | 0.951824 |
+| depth | 0.027074 |  1.000000 | -0.297123 | -0.012037 | -0.025858 | -0.029903 | 0.094344 |
+| table | 0.181688 | -0.297123 |  1.000000 |  0.127832 |  0.195367 |  0.183362 | 0.150646 |
+| price | 0.922186 | -0.012037 |  0.127832 |  1.000000 |  0.885019 |  0.864059 | 0.860247 |
+|     x | 0.975152 | -0.025858 |  0.195367 |  0.885019 |  1.000000 |  0.972447 | 0.969336 |
+|     y | 0.949687 | -0.029903 |  0.183362 |  0.864059 |  0.972447 |  1.000000 | 0.948768 |
+|     z | 0.951824 |  0.094344 |  0.150646 |  0.860247 |  0.969336 |  0.948768 | 1.000000 |
 
-Which can also be visualized of this heatmap of correlations:
+Which can also be visualized as a heatmap of correlations:
 
-<img src="/images/heatmap.png" align="center" width="75%"/>
+<p align="center"><img src="images/heatmap.png" alt="heat"  width="75%"></p>
+
+The price of a diamond has a direct correlation with its dimensions (and hence with the carat, since the weight of the diamonds is itself a function of its dimensions). It is not a straight linear correlation but an exponential one.
+There are other relevant features which also influence its price, such as color, clarity and cut. A pairplot of these attributes can be useful in inspecting these relations:
+
+<p align="center"><img src="images/output.png" alt="pp"  width="75%"></p>
 
 ---
 
