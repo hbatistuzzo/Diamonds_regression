@@ -7,10 +7,12 @@
 
 ## Project objective
 
-<img src="images/diamonds.jpg" align="right" width="40%"/>
+<img src="images/diamonds.jpg" align="right" width="50%"/>
 This project is based on a [somewhat classic kaggle dataset from 2016](https://www.kaggle.com/datasets/shivam2503/diamonds) used to explain introductory level machine learning.
 Given a historic dataset with over 54,000 diamonds prices (`diamonds.csv`) and their characteristics, we are tasked by our client (Rick Harrison from _Pawn Stars_) to estimate the price of his own list (`rick_diamonds.csv`)
 of 5,000 diamonds, thus setting up a classic regression problem. Specificaly, the goals are:
+
+
 - to infer which characteristics are more likely to influence a diamond's price
 - to progressively train and test a regression model until its accuracy meet a certain standard (defined by the RMSE)
 
