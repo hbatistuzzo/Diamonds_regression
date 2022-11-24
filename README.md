@@ -7,6 +7,7 @@
 
 ## Project objective
 
+<img src="images/diamonds.jpg" align="right" width="40%"/>
 This project is based on a [somewhat classic kaggle dataset from 2016](https://www.kaggle.com/datasets/shivam2503/diamonds) used to explain introductory level machine learning.
 Given a historic dataset with over 54,000 diamonds prices (`diamonds.csv`) and their characteristics, we are tasked by our client (Rick Harrison from _Pawn Stars_) to estimate the price of his own list (`rick_diamonds.csv`)
 of 5,000 diamonds, thus setting up a classic regression problem. Specificaly, the goals are:
@@ -29,20 +30,18 @@ of 5,000 diamonds, thus setting up a classic regression problem. Specificaly, th
 
 ## Dataset Description
 
-<img src="/images/diamonds.jpg" align="center" width="60%"/>
-
 The list of diamonds that cointains the following information:
 
-Price: Price in US dollars
-Carat: Weight of the diamond
-Cut: Quality of the cut (Fair,Good,Very Good,Premium,Ideal)
-Color: Diamond colour,from J(worst) to D(best)
-Clarity: A measurement of how clear the diamond is(I1(worst),SI2,SI1,VS2,VS1,VVS2,VVS1,IF(best))
-x:Length in mm
-y:Width in mm
-z:Depth in mm
-Depth:Total depth percentage = z/mean(x,y) = 2*z/(x+y)(43-79)
-Table: Width of top of diamond relative to widest point(43-95)
+- Price: Price in US dollars
+- Carat: Weight of the diamond
+- Cut: Quality of the cut (Fair,Good,Very Good,Premium,Ideal)
+- Color: Diamond colour,from J(worst) to D(best)
+- Clarity: A measurement of how clear the diamond is(I1(worst),SI2,SI1,VS2,VS1,VVS2,VVS1,IF(best))
+- x:Length in mm
+- y:Width in mm
+- z:Depth in mm
+- Depth:Total depth percentage = z/mean(x,y) = 2*z/(x+y)(43-79)
+- Table: Width of top of diamond relative to widest point(43-95)
 
 
 <img src="/images/diamonds.jfif" align="center" width="60%"/>
