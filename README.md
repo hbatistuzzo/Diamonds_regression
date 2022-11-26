@@ -154,15 +154,31 @@ The list of diamonds contains the following information:
 
 ### Weights
 
+- The weight distribution is skewed. They mostly fall between **0.2 carat** and **1.2 carat**. 
+
 <p align="center"><img src="images/weights.png" alt="weights"  width="100%"></p>
 
 #### Price distribution of diamond weights:
 
 <p align="center"><img src="images/weights_prices.png" alt="weights_prices"  width="100%"></p>
 
-**Insights:**
+- The majority costs between **$326** and **$5000**.
+- Interestingly enough, KDE plots really do extrapolate values to ranges that may not make any sense (as is the case of diamonds with negative values).
+- Please bear in mind that I'm just testing and exploring a couple of different graphs!
 
-- The weight distribution is skewed. Most of the weights fall between **0.2 carat** and **1.2 carat**. Most of these cost between **$326** and **$5000**.
+---
+
+### Depth Percentage
+
+- We can see that the depth percentage distribution is normally distributed. Most diamonds fall between values of **60%** and**64%**.
+
+<p align="center"><img src="images/depth.png" alt="depths"  width="100%"></p>
+
+#### Price distribution of depth percentage:
+
+<p align="center"><img src="images/depth_prices.png" alt="depths_prices"  width="100%"></p>
+
+- Most costs fall between **$326** and **$6200**.
 
 ---
 
