@@ -238,8 +238,6 @@ Which can also be visualized as a heatmap of correlations:
 The price of a diamond has a direct correlation with its dimensions (and hence with the carat, since the weight of the diamonds is itself a function of its dimensions). It is not a straight linear correlation but an exponential one.
 There are other relevant features which also influence its price, such as color, clarity and cut. A pairplot of these attributes can be useful in inspecting these relations:
 
-<p align="center"><img src="images/output.png" alt="pp"  width="75%"></p>
-
 ---
 
 ## Modelling
