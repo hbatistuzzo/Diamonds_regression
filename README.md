@@ -168,7 +168,7 @@ The list of diamonds contains the following information:
 
 ---
 
-### Depth Percentage
+### Diamond Depth Percentage
 
 - We can see that the depth percentage distribution is normally distributed. Most diamonds fall between values of **60%** and**64%**.
 
@@ -180,6 +180,22 @@ The list of diamonds contains the following information:
 
 - Most costs fall between **$326** and **$6200**.
 
+---
+
+### Diamond Tables
+
+- Most of diamond tables fall between **54** and **61**.
+
+<p align="center"><img src="images/table.png" alt="depths"  width="100%"></p>
+
+#### Price distribution of tables:
+
+- The majority costs between **$326** and **$3800**.
+
+<p align="center"><img src="images/table_prices.png" alt="depths_prices"  width="100%"></p>
+
+- The table is measured as the width of the top of the diamond relative to the widest point, and it's an artificial feature imposed by the artisan, which explains the
+"sawed" distribution seen in both graphs above, as certain ratios are prefered when cutting and shaping the diamonds.
 ---
 
 - Bivariate Analysis: let's analyze the correlation matrix between the variables:
