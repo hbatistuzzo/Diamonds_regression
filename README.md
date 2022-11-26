@@ -139,6 +139,31 @@ The list of diamonds contains the following information:
 
 <p align="center"><img src="images/clarity_prices.png" alt="clarity_prices"  width="100%"></p>
 
+**Insights:**
+
+- Most of the diamonds with **SI1 Clarity** costs in between **$326** and **$5100**
+- Most of the diamonds with **VS2 Clarity** costs in between **$334** and **$2600**
+- Most of the diamonds with **SI2 Clarity** costs in between **$326** and **$5200**
+- Most of the diamonds with **VS1 Clarity** costs in between **$327** and **$3600**
+- Most of the diamonds with **VVS2 Clarity** costs in between **$336** and **$3500**
+- Most of the diamonds with **VVS1 Clarity** costs in between **$336** and **$3000**
+- Most of the diamonds with **IF Clarity** costs in between **$369** and **$2500**
+- Most of the diamonds with **I1 Clarity** costs in between **$345** and **$7500**
+
+---
+
+### Weights
+
+<p align="center"><img src="images/weights.png" alt="weights"  width="100%"></p>
+
+#### Price distribution of diamond weights:
+
+<p align="center"><img src="images/weights_prices.png" alt="weights_prices"  width="100%"></p>
+
+**Insights:**
+
+- The weight distribution is skewed. Most of the weights fall between **0.2 carat** and **1.2 carat**. Most of these cost between **$326** and **$5000**.
+
 ---
 
 - Bivariate Analysis: let's analyze the correlation matrix between the variables:
