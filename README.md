@@ -242,6 +242,43 @@ There are other relevant features which also influence its price, such as color,
 
 ---
 
+## A Further Look
+
+### Let's now look at how this diagram varies by associating other features
+
+- Correlation 'price' and 'carat' associated to 'color'
+
+<p align="center"><img src="images/pc_color.png" alt="pc1"  width="80%"></p>
+
+- Correlation 'price' and 'carat' associated to 'clarity'
+
+<p align="center"><img src="images/pc_clarity.png" alt="pc2"  width="80%"></p>
+
+- Correlation 'price' and 'carat' associated to 'cut'
+
+<p align="center"><img src="images/pc_cut.png" alt="pc3"  width="80%"></p>
+
+Since the first plot clearly points to a logarithmic relation between price and carat, we will perform a log transformation so that the additional relations become clearer:
+
+```
+	diamonds["carat_log"] = np.log(diamonds["carat"])
+	diamonds["price_log"] = np.log(diamonds["price"])
+```
+
+- Correlation 'price_log' and 'carat_log' associated to 'color'
+
+<p align="center"><img src="images/pc_color_log.png" alt="pc1l"  width="80%"></p>
+
+- Correlation 'price_log' and 'carat_log' associated to 'clarity'
+
+<p align="center"><img src="images/pc_clarity_log.png" alt="pc2l"  width="80%"></p>
+
+- Correlation 'price_log' and 'carat_log' associated to 'cut'
+
+<p align="center"><img src="images/pc_cut_log.png" alt="pc3l"  width="80%"></p>
+
+---
+
 ## Model Creation & Performance Evaluation
 
 - We will first standardize the data and then split the dataset with a ratio of 0.2 i.e. 80% of data will be used for training and 20% for the validation process:
