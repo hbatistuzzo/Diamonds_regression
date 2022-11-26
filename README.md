@@ -391,7 +391,7 @@ Since the first plot clearly points to a logarithmic relation between price and 
 7 - Price predicted using carat, table, depth, clarity and color variables from `diamonds.csv`(987); Cut does not seen to influence the model
 
 
-8 - Price predicted using carat,table,depth,x, clarity and color variables from diamonds.csv(709); Cut does not seen to influence the model
+8 - Price predicted using carat,table,depth,x, clarity and color variables `from diamonds.csv(709)`; Cut does not seen to influence the model
 
 
 X was the missing piece in this linear regression model
