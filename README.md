@@ -16,7 +16,6 @@ of 5,000 diamonds, thus setting up a classic regression problem. Specificaly, th
 - to infer which characteristics are more likely to influence a diamond's price
 - to progressively train and test a regression model until its accuracy meet a certain standard (defined by the RMSE). Rick’s goal is to obtain an average error below 900 dollars.
 
-
 <p align="center"><img src="images/challenge_objectives.png" alt="full"  width="60%"></p>
 
 ---
@@ -364,6 +363,8 @@ Since the first plot clearly points to a logarithmic relation between price and 
 	Mean Squared Error: 622858.906963629
 	Root Mean Squared Error: 789.2141071747444
 ```
+
+
 
 ---
 
