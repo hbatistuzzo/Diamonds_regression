@@ -77,7 +77,7 @@ The list of diamonds contains the following information:
 ### Cuts
 
 - Most of the diamonds have **Ideal Cuts** with a ratio of **39.95%** followed by **Premium Cuts** and **Very Good Cuts**
-<p align="center"><img src="images/cuts.png" alt="cut"  width="100%"></p>
+<p align="center"><img src="images/cuts.png" alt="cut"  width="50%"></p>
 
 -In absolute values, we get:
 
@@ -99,7 +99,7 @@ The list of diamonds contains the following information:
 - Most of the diamonds have **G** color with a ratio of **20.93%** followed by **E** and **F**
 - Only a few have **J** (worst) color with a ratio of **5.21%**.
 
-<p align="center"><img src="images/color.png" alt="color"  width="100%"></p>
+<p align="center"><img src="images/color.png" alt="color"  width="50%"></p>
 
 -In absolute values, we get:
 
