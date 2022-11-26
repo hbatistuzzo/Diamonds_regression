@@ -196,6 +196,23 @@ The list of diamonds contains the following information:
 
 - The table is measured as the width of the top of the diamond relative to the widest point, and it's an artificial feature imposed by the artisan, which explains the
 "sawed" distribution seen in both graphs above, as certain ratios are prefered when cutting and shaping the diamonds.
+
+---
+
+## Data Cleaning
+
+- The pairplot immediately tells us that there are some features with datapoints that are far from the rest of its colleagues. This will affect the outcome of our regression model and hence they will be removed.
+
+<p align="center"><img src="images/output.png" alt="pp"  width="100%"></p>
+
+- Let's examine the regression lines in these distributions as well.
+
+<p align="center"><img src="images/regression.png" alt="reg"  width="100%"></p>
+
+- After dropping the outliers, let's have a look at the new pairwise relationships:
+
+<p align="center"><img src="images/pairplot_clean.png" alt="pp"  width="100%"></p>
+
 ---
 
 - Bivariate Analysis: let's analyze the correlation matrix between the variables:
