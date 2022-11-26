@@ -254,65 +254,79 @@ There are other relevant features which also influence its price, such as color,
 	x_train, x_test, y_train, y_test = train_test_split(x, y, test_size=0.2, random_state=42)
 ```
 
-- With the pre-processing done, let's try a couple of different predictive models with SKLearn and compare their respective RMSE's
-- (ideally, this comparison would be much faster with PyCaret, but let's stick with a manual implementation for now, for didactic purposes):
+- With the pre-processing done, let's try a couple of different predictive models with SKLearn and compare their respective RMSE's (ideally, this comparison would be much faster with PyCaret, but let's stick with a manual implementation for now, for didactic purposes):
 
 ### Linear Regression
 
+```
 	lr = LinearRegression()
 	lr.fit(x_train,y_train)
 	y_pred = lr.predict(x_test)
+```
 
 - After performing the Linear Regression with SKLearn, we get:
 
+```
 	R Squared Value: 0.8885407086951569
 	Adjusted R Squared Value: 0.8884381178154531
 	Mean Absolute Error: 844.8370225588242
 	Mean Squared Error: 1733016.3581049452
 	Root Mean Squared Error: 1316.4407917202145
+```
 
 ### Decision Tree Regression
 
+```
 	dt = DecisionTreeRegressor()
 	dt.fit(x_train,y_train)
 	y_pred = dt.predict(x_test)
+```
 
 - After performing the Decision Tree Regression with SKLearn, we get:
 
+```
 	R Squared Value: 0.9640975493985238
 	Adjusted R Squared Value: 0.9640645035757162
 	Mean Absolute Error: 364.3079280751941
 	Mean Squared Error: 558226.5368818962
 	Root Mean Squared Error: 747.1455928277273
+```
 
 ### Random Forest Regression
 
+```
 	rf = RandomForestRegressor()
 	rf.fit(x_train,y_train)
 	y_pred = rf.predict(x_test)
+```
 
 - After performing the Random Forest Regression with SKLearn, we get:
 
+```
 	R Squared Value: 0.9805862653291031
 	Adjusted R Squared Value: 0.9805683962748959
 	Mean Absolute Error: 269.82116456983283
 	Mean Squared Error: 301852.9847328354
 	Root Mean Squared Error: 549.4114894437823
-
+```
 
 ### K-Neighbours Regression
-	
+
+```	
 	kn = KNeighborsRegressor()
 	kn.fit(x_train,y_train)
 	y_pred = kn.predict(x_test)
+```
 
 - After performing the K-Neighbours Regression with SKLearn, we get:
 
+```
 	R Squared Value: 0.9599407056786297
 	Adjusted R Squared Value: 0.9599038337570821
 	Mean Absolute Error: 402.15884756845116
 	Mean Squared Error: 622858.906963629
 	Root Mean Squared Error: 789.2141071747444
+```
 
 ---
 
