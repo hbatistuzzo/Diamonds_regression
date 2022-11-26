@@ -74,10 +74,12 @@ The list of diamonds contains the following information:
 
 <p align="center"><img src="images/prices.png" alt="prices"  width="100%"></p>
 
+---
+
 ### Cuts
 
 - Most of the diamonds have **Ideal Cuts** with a ratio of **39.95%** followed by **Premium Cuts** and **Very Good Cuts**
-<p align="center"><img src="images/cuts.png" alt="cut"  width="50%"></p>
+<p align="center"><img src="images/cuts.png" alt="cut"  width="75%"></p>
 
 -In absolute values, we get:
 
@@ -93,13 +95,14 @@ The list of diamonds contains the following information:
 - Most of the diamonds with **Good Cut** costs between **$327** and **$4700**
 - Most of the diamonds with **Fair Cut** costs between **$337** and **$5000**
 
+---
 
 ### Colors
 
 - Most of the diamonds have **G** color with a ratio of **20.93%** followed by **E** and **F**
 - Only a few have **J** (worst) color with a ratio of **5.21%**.
 
-<p align="center"><img src="images/color.png" alt="color"  width="50%"></p>
+<p align="center"><img src="images/color.png" alt="color"  width="75%"></p>
 
 -In absolute values, we get:
 
@@ -119,9 +122,22 @@ The list of diamonds contains the following information:
 - Most of the diamonds with **I Color** costs between **$334** and **$6200**
 - Most of the diamonds with **J Color** costs between **$335** and **$6400**
 
+---
+
 ### Clarity
 
+- Most of the diamonds have **SI1** clarity with a ratio of **24.22%** followed by **VS2** and **SI2**
+- Only a few have **I1** clarity with a ratio of **1.37%**.
 
+<p align="center"><img src="images/clarity.png" alt="clar"  width="75%"></p>
+
+- In absolute values, we get:
+
+<p align="center"><img src="images/clarity_abs.png" alt="colors"  width="100%"></p>
+
+#### Price distribution of diamond clarities:
+
+<p align="center"><img src="images/clarity_prices.png" alt="clarity_prices"  width="100%"></p>
 
 ---
 
