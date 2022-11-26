@@ -66,13 +66,19 @@ The list of diamonds contains the following information:
 
 ---
 
-##### Exploring each of the attributes:
+### Exploring each of the attributes:
+
+#### Price
 
 - "Price", as expected, is skewed. There are few diamonds which are worth too much and a lot of diamonds with reasonably small prices.
 
 <p align="center"><img src="images/prices.png" alt="prices"  width="100%"></p>
 
+#### Cuts
+
 - Most of the diamonds have **Ideal Cuts** with a ratio of **39.95%** followed by **Premium Cuts** and **Very Good Cuts**
+<p align="center"><img src="images/cuts.png" alt="cut"  width="100%"></p>
+
 - With absolute values, we get:
 
 <p align="center"><img src="images/cuts_abs.png" alt="cuts"  width="100%"></p>
