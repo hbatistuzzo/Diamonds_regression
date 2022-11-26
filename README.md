@@ -72,9 +72,14 @@ The list of diamonds contains the following information:
 
 <p align="center"><img src="images/prices.png" alt="prices"  width="100%"></p>
 
+- Most of the diamonds have **Ideal Cuts** with a ratio of **39.95%** followed by **Premium Cuts** and **Very Good Cuts**
+- With absolute values, we get:
+
+<p align="center"><img src="images/cuts_abs.png" alt="cuts"  width="100%"></p>
+
 ---
 
-- Bivariate Analysis: lets analyze the correlation matrix between the variables:
+- Bivariate Analysis: let's analyze the correlation matrix between the variables:
 
 <p align="center">
 
