@@ -66,22 +66,46 @@ The list of diamonds contains the following information:
 
 ---
 
-### Exploring each of the attributes:
+## Exploring each of the attributes:
 
-#### Price
+### Price
 
 - "Price", as expected, is skewed. There are few diamonds which are worth too much and a lot of diamonds with reasonably small prices.
 
 <p align="center"><img src="images/prices.png" alt="prices"  width="100%"></p>
 
-#### Cuts
+### Cuts
 
 - Most of the diamonds have **Ideal Cuts** with a ratio of **39.95%** followed by **Premium Cuts** and **Very Good Cuts**
 <p align="center"><img src="images/cuts.png" alt="cut"  width="100%"></p>
 
-- With absolute values, we get:
+-In absolute values, we get:
 
-<p align="center"><img src="images/cuts_abs.png" alt="cuts"  width="100%"></p>
+<p align="center"><img src="images/cuts_abs.png" alt="cut"  width="100%"></p>
+
+#### Price distribution of diamond cuts:
+
+<p align="center"><img src="images/cut_prices.png" alt="cuts"  width="100%"></p>
+
+- diamonds with **Ideal Cut** costs between **$326** and **$2500**
+- diamonds with **Premium Cut** costs between **$326** and **$5000**
+- diamonds with **Very Good Cut** costs between **$336** and **$4800**
+- diamonds with **Good Cut** costs between **$327** and **$4700**
+- diamonds with **Fair Cut** costs between **$337** and **$5000**
+
+
+#### Colors
+
+- Most of the diamonds have **G** color with a ratio of **20.93%** followed by **E** and **F**
+- Only a few have **J** (worst) color with a ratio of **5.21%**.
+
+<p align="center"><img src="images/color.png" alt="color"  width="100%"></p>
+
+-In absolute values, we get:
+
+<p align="center"><img src="images/color_abs.png" alt="colors"  width="100%"></p>
+
+#### Cuts
 
 ---
 
