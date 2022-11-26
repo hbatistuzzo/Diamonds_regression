@@ -246,11 +246,13 @@ There are other relevant features which also influence its price, such as color,
 
 - We will first standardize the data and then split the dataset with a ratio of 0.2 i.e. 80% of data will be used for training and 20% for the validation process:
 
+```
 	sc = StandardScaler()
 	x = diamonds.drop(["price"],axis =1) # price will be our target (y)
 	x = sc.fit_transform(x)
 	y = diamonds["price"]
 	x_train, x_test, y_train, y_test = train_test_split(x, y, test_size=0.2, random_state=42)
+```
 
 - With the pre-processing done, let's try a couple of different predictive models with SKLearn and compare their respective RMSE's
 - (ideally, this comparison would be much faster with PyCaret, but let's stick with a manual implementation for now, for didactic purposes):
@@ -315,25 +317,26 @@ There are other relevant features which also influence its price, such as color,
 ---
 
 ## Steps
-1 - Price predicted as the mean of prices from diamonds.csv(3980)
+
+1 - Price predicted as the mean of prices from `diamonds.csv`(3980)
 
 
-2 - Price predicted using carat as the only variable from diamonds.csv(1605)
+2 - Price predicted using carat as the only variable from `diamonds.csv`(1605)
 
 
-3 - Price predicted using carat and depth variables from diamonds.csv(1598)
+3 - Price predicted using carat and depth variables from `diamonds.csv`(1598)
 
 
-4 - Price predicted using carat and table variables from diamonds.csv(1595)
+4 - Price predicted using carat and table variables from `diamonds.csv`(1595)
 
 
-5 - Price predicted using carat,table and depth variables from diamonds.csv(1583)
+5 - Price predicted using carat, table and depth variables from `diamonds.csv`(1583)
 
 
-6 - Price predicted using carat,table,depth and clarity variables from diamonds.csv(1217); Cut does not seen to influence the model
+6 - Price predicted using carat, table, depth and clarity variables from `diamonds.csv`(1217); Cut does not seen to influence the model
 
 
-7 - Price predicted using carat,table,depth, clarity and color variables from diamonds.csv(987); Cut does not seen to influence the model
+7 - Price predicted using carat, table, depth, clarity and color variables from `diamonds.csv`(987); Cut does not seen to influence the model
 
 
 8 - Price predicted using carat,table,depth,x, clarity and color variables from diamonds.csv(709); Cut does not seen to influence the model
