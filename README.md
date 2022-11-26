@@ -1,5 +1,3 @@
-# <p style="padding:10px;background-color:#0fa79f;margin:0;color:#111423;font-family:newtimeroman;font-size:150%;text-align:center;border-radius: 15px 50px;overflow:hidden;font-weight:500">Diamond Price Analysis & Prediction</p>
-
 # Diamonds_Henrique
 
 ![GitHub top language](https://img.shields.io/github/languages/top/hbatistuzzo/Diamonds_Henrique)
@@ -52,9 +50,8 @@ The list of diamonds contains the following information:
 
 <p align="center"><img src="images/diamonds.jfif" alt="fuller"  width="60%"></p>
 
-The dataset itself doesn't need any cleaning other than the removal of a few lines where dimensions (y or x) are set to zero, which is physically impossible.
-
-- A first modelling atempt will be performed by exploring the relationship between price and the physical dimensions of the diamonds. An Univariate Analysis for statistical description yields
+- The dataset itself doesn't need any cleaning other than the removal of a few lines where dimensions (y or x) are set to zero, which is physically impossible.
+- diamonds.describe yields an univariate analysis for statistical description:
 
 |       |        carat |        depth |        table |        price |            x |            y |            z |
 |------:|-------------:|-------------:|-------------:|-------------:|-------------:|-------------:|-------------:|
@@ -67,11 +64,17 @@ The dataset itself doesn't need any cleaning other than the removal of a few lin
 |   75% |     1.040000 |    62.500000 |    59.000000 |  5331.250000 |     6.540000 |     6.540000 |     4.040000 |
 |   max |     5.010000 |    79.000000 |    95.000000 | 18823.000000 |    10.740000 |    58.900000 |    31.800000 |
 
+---
+
+##### Exploring each of the attributes:
+
 - "Price", as expected, is skewed. There are few diamonds which are worth too much and a lot of diamonds with reasonably small prices.
 
 <p align="center"><img src="images/prices.png" alt="prices"  width="100%"></p>
 
-Bivariate Analysis: a first tentative step is to analyze the correlation matrix between the variables, which yields:
+---
+
+- Bivariate Analysis: lets analyze the correlation matrix between the variables:
 
 <p align="center">
 
@@ -100,7 +103,7 @@ There are other relevant features which also influence its price, such as color,
 
 ## Modelling
 
-
+- A first modelling atempt will be performed by exploring the relationship between price and the physical dimensions of the diamonds.
 
 ---
 
