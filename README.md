@@ -203,7 +203,7 @@ The list of diamonds contains the following information:
 
 - The pairplot immediately tells us that there are some features with datapoints that are far from the rest of its colleagues. This will affect the outcome of our regression model and hence they will be removed.
 
-<p align="center"><img src="images/output.png" alt="pp"  width="100%"></p>
+<p align="center"><img src="images/pairplot2.png" alt="pp"  width="100%"></p>
 
 - Let's examine the regression lines in these distributions as well.
 
