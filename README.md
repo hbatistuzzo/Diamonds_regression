@@ -1,3 +1,5 @@
+# <p style="padding:10px;background-color:#0fa79f;margin:0;color:#111423;font-family:newtimeroman;font-size:150%;text-align:center;border-radius: 15px 50px;overflow:hidden;font-weight:500">Diamond Price Analysis & Prediction</p>
+
 # Diamonds_Henrique
 
 ![GitHub top language](https://img.shields.io/github/languages/top/hbatistuzzo/Diamonds_Henrique)
@@ -43,7 +45,7 @@ The list of diamonds contains the following information:
 - clarity (I1 (worst), SI2, SI1, VS2, VS1, VVS2, VVS1, IF (best)): Diamonds can have internal characteristics known as inclusions or external characteristics known as blemishes. Diamonds without inclusions or blemishes are rare; however, most characteristics can only be seen with magnification.
 - depth (43-79): It is the total depth percentage which equals to z / mean(x, y) = 2 * z / (x + y). The depth of the diamond is its height (in millimetres) measured from the culet (bottom tip) to the table (flat, top surface) as referred in the labelled diagram above.
 - table (43-95): It is the width of the top of the diamond relative to widest point. It gives diamond stunning fire and brilliance by reflecting lights to all directions which when seen by an observer, seems lustrous.
-- price ($$326 - $18826): It is the price of the diamond in US dollars. It is our very target column in the dataset.
+- price ($326 - $18826): It is the price of the diamond in US dollars. It is our very target column in the dataset.
 - x (0 - 10.74): Length of the diamond (in mm)
 - y (0 - 58.9): Width of the diamond (in mm)
 - z (0 - 31.8): Depth of the diamond (in mm)
