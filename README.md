@@ -87,14 +87,14 @@ The list of diamonds contains the following information:
 
 <p align="center"><img src="images/cut_prices.png" alt="cuts"  width="100%"></p>
 
-- diamonds with **Ideal Cut** costs between **$326** and **$2500**
-- diamonds with **Premium Cut** costs between **$326** and **$5000**
-- diamonds with **Very Good Cut** costs between **$336** and **$4800**
-- diamonds with **Good Cut** costs between **$327** and **$4700**
-- diamonds with **Fair Cut** costs between **$337** and **$5000**
+- Most of the diamonds with **Ideal Cut** costs between **$326** and **$2500**
+- Most of the diamonds with **Premium Cut** costs between **$326** and **$5000**
+- Most of the diamonds with **Very Good Cut** costs between **$336** and **$4800**
+- Most of the diamonds with **Good Cut** costs between **$327** and **$4700**
+- Most of the diamonds with **Fair Cut** costs between **$337** and **$5000**
 
 
-#### Colors
+### Colors
 
 - Most of the diamonds have **G** color with a ratio of **20.93%** followed by **E** and **F**
 - Only a few have **J** (worst) color with a ratio of **5.21%**.
@@ -105,7 +105,23 @@ The list of diamonds contains the following information:
 
 <p align="center"><img src="images/color_abs.png" alt="colors"  width="100%"></p>
 
-#### Cuts
+#### Price distribution of diamond colors:
+
+<p align="center"><img src="images/color_prices.png" alt="color_prices"  width="100%"></p>
+
+**Insights:**
+
+- Most of the diamonds with **G Color** costs between **$354** and **$2500**
+- Most of the diamonds with **E Color** costs between **$326** and **$3700**
+- Most of the diamonds with **F Color** costs between **$342** and **$4500**
+- Most of the diamonds with **H Color** costs between **$337** and **$5200**
+- Most of the diamonds with **D Color** costs between **$357** and **$2500**
+- Most of the diamonds with **I Color** costs between **$334** and **$6200**
+- Most of the diamonds with **J Color** costs between **$335** and **$6400**
+
+### Clarity
+
+
 
 ---
 
