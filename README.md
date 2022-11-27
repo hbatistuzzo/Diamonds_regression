@@ -412,55 +412,120 @@ the quality of any diamond.
 
 Now to predict the prices for Ricks' diamonds!
 
-### Predicting the price of Ricks' diamonds with PyCaret
-
-- PyCaret is an open-source, low-code machine learning library and end-to-end model management tool built-in Python for automating machine learning workflows.
-- We know that the price is right-skewed, and thus we checked to see if a log transformation could make the Price attribute approximately normal to give fighting chances to algorithms that assume normality. We never actually plotted it though, let's do it now:
+### Predicting the price of Ricks' diamonds
 
 ```
 	fig = px.histogram(diamonds, x=["price_log"], title = 'Histgram of Log Price', template = 'plotly_dark')
 	fig.show()
 ```
 
-- It's not exactly normal... Still, it's what we got to work with! Let's see the outcome.
+- The distribution is not exactly normal... Still, it's what we got to work with! Let's see the outcome.
 - Also, we should check what Shapiro-Wilks has to say about this!
 
 <p align="center"><img src="images/normal.png" alt="normal"  width="100%"></p>
 
----
+The PyCaret model comparison tells us that the GradientBoostingRegressor yields the best results for predicting the price. Let's create a function for the model:
 
-## Steps
+```
+	def cria_modelos(df, df_pred, x_test, y_test):
+    	X = df[x_test]
+    	y = df[y_test]
 
-1 - Price predicted as the mean of prices from `diamonds.csv`(3980)
+	model = GradientBoostingRegressor()
+	model.fit(X,y)
+    
+    	price_pred = model.predict(df_pred[x_test])
+    
+    	return price_pred
+```
 
-
-2 - Price predicted using carat as the only variable from `diamonds.csv`(1605)
-
-
-3 - Price predicted using carat and depth variables from `diamonds.csv`(1598)
-
-
-4 - Price predicted using carat and table variables from `diamonds.csv`(1595)
-
-
-5 - Price predicted using carat, table and depth variables from `diamonds.csv`(1583)
-
-
-6 - Price predicted using carat, table, depth and clarity variables from `diamonds.csv`(1217); Cut does not seen to influence the model
+We will now create masks for clarity and color to optimize the modelling process:
 
 
-7 - Price predicted using carat, table, depth, clarity and color variables from `diamonds.csv`(987); Cut does not seen to influence the model
+```
+	# Clarity masks
+	# test dataframe
+	teste_if = diamonds_test['clarity'] == 'IF'
+	teste_vvs1 = diamonds_test['clarity'] == 'VVS1'
+	teste_vvs2 = diamonds_test['clarity'] == 'VVS2'
+	teste_vs1 = diamonds_test['clarity'] == 'VS1'
+	teste_vs2 = diamonds_test['clarity'] == 'VS2'
+	teste_si1 = diamonds_test['clarity'] == 'SI1'
+	teste_si2 = diamonds_test['clarity'] == 'SI2'
+	teste_i1 = diamonds_test['clarity'] == 'I1'
 
+	# rick dataframe
+	rick_if = diamonds_rick['clarity'] == 'IF'
+	rick_vvs1 = diamonds_rick['clarity'] == 'VVS1'
+	rick_vvs2 = diamonds_rick['clarity'] == 'VVS2'
+	rick_vs1 = diamonds_rick['clarity'] == 'VS1'
+	rick_vs2 = diamonds_rick['clarity'] == 'VS2'
+	rick_si1 = diamonds_rick['clarity'] == 'SI1'
+	rick_si2 = diamonds_rick['clarity'] == 'SI2'
+	rick_i1 = diamonds_rick['clarity'] == 'I1'
 
-8 - Price predicted using carat,table,depth,x, clarity and color variables `from diamonds.csv(709)`; Cut does not seen to influence the model
+	# Color masks
+	# test dataframe
+	teste_d = diamonds_test['color'] == 'D'
+	teste_e = diamonds_test['color'] == 'E'
+	teste_f = diamonds_test['color'] == 'F'
+	teste_g = diamonds_test['color'] == 'G'
+	teste_h = diamonds_test['color'] == 'H'
+	teste_i = diamonds_test['color'] == 'I'
+	teste_j = diamonds_test['color'] == 'J'
+	# rick dataframe
+	rick_d = diamonds_rick['color'] == 'D'
+	rick_e = diamonds_rick['color'] == 'E'
+	rick_f = diamonds_rick['color'] == 'F'
+	rick_g = diamonds_rick['color'] == 'G'
+	rick_h = diamonds_rick['color'] == 'H'
+	rick_i = diamonds_rick['color'] == 'I'
+	rick_j = diamonds_rick['color'] == 'J'
+```
 
+- Now to create lists
 
-X was the missing piece in this linear regression model
+```
+	#listas clarity mask
+	teste_clarity_list = [
+	    teste_if, teste_vvs1, teste_vvs2, teste_vs1, teste_vs2, teste_si1,
+	    teste_si2, teste_i1
+	]
 
+	rick_clarity_list = [
+	    rick_if, rick_vvs1, rick_vvs2, rick_vs1, rick_vs2, rick_si1, rick_si2,
+	    rick_i1
+	]
+	#listas color mask
+	teste_color_list = [
+	    teste_d, teste_e, teste_f, teste_g, teste_h, teste_i, teste_j
+	]
 
-9 - Price predicted using carat,table,depth,x, clarity , color and cut(grouped by Fair and Good) variables from diamonds.csv(688)
+	rick_color_list = [rick_d, rick_e, rick_f, rick_g, rick_h, rick_i, rick_j]
+```
 
----
+- And finally a loop to test all combination of models:
 
-# Conclusion
-Using most of the data of the original DataFrame significantly improved the preciseness of the model.
+``` 
+	for clarity in list(zip(teste_clarity_list, rick_clarity_list)):
+		for color in list(zip(teste_color_list, rick_color_list)):
+			diamonds_rick.loc[clarity[1] & color[1],
+                          'price_predicted'] = cria_modelos(
+                              diamonds_test[clarity[0] & color[0]],
+                              diamonds_rick[clarity[1] & color[1]],
+                              ['carat', 'cut','depth','x','y','z','table'], 'price')
+```
+
+- Rounding up the results and saving in a new csv:
+
+```
+	diamonds_test[['carat', 'cut','depth','x','y','z','table','price']].applymap(lambda x: round(np.exp(x),ndigits=2))
+	diamonds_rick[['carat', 'cut','depth','x','y','z','table', 'price_predicted']].applymap(lambda x: round(np.exp(x),ndigits=2))
+
+	diamonds_rick.to_csv('price_pred.csv', index=False)
+```
+
+- This process yields an RMSE of just $579.42, way below our second objective,
+	"- to progressively train and test a regression model until its accuracy meet a certain standard (defined by the RMSE). Rick’s goal is to obtain an average error below 900 dollars."
+
+- Rick is now a richer man and we have proved the usefulness of machine learning! 🥳 🥂 🍾
