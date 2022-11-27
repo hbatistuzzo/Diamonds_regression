@@ -21,13 +21,13 @@ of 5,000 diamonds, thus setting up a classic regression problem. Specificaly, th
 ---
 
 ## Technologies
+
 - Python 3.8.3
 	- Pandas 1.4.4
 	- Numpy 1.20.3
 	- Pycaret 2.3.10
 	- Seaborn 0.11.2
 	- Matplotlib 3.5.3
-	- SQLAlchemy 1.4.42
 	- Scikit-learn 1.1
 
 ---
@@ -364,7 +364,44 @@ Since the first plot clearly points to a logarithmic relation between price and 
 	Root Mean Squared Error: 789.2141071747444
 ```
 
+### Model Explainability with SHAP (SHapley Additive exPlanations)
 
+- AI solutions are somewhat mystic in nature to non-technical personel due to their "black box" nature. SHAP comes in handy for model explainability. It can break down the mechanics of any machine learning model and deep neural net to make them understandable to anyone. It is a Python package based on the 2016 NIPS paper about SHAP values. The premise of this paper and Shapley values comes from approaches in game theory. In a nutshel, SHAP offers two advantages: global model interpretability and local interpretability.
+
+- Plotting the Shapley values for one of the models above tells us the relative importante of each attribute on the model output magnitude:
+
+<p align="center"><img src="images/shap1.png" alt="shap1"  width="100%"></p>
+
+- The carat stands out as the driving factor for a diamond's price. Reading the axis title below, we see that the importances are just the average absolute Shapley values for a feature.
+- We won't also stop here. In the plot above, we only looked at absolute values of importance. We don't know which feature positively or negatively influences the model. Let's do that with SHAP summary_plot:
+
+<p align="center"><img src="images/shap2.png" alt="shap2"  width="100%"></p>
+
+- The left vertical axis denotes feature names, ordered based on importance from top to bottom.
+- The horizontal axis represents the magnitude of the SHAP values for predictions.
+- The vertical right axis represents the actual magnitude of a feature as it appears in the dataset and colors the points.
+- We see that as carat increases, its effect on the model is more positive. The same is true for y feature. The x and z features are a bit tricky with a cluster of mixed points around the center.
+
+### Exploring each feature with dependence plots
+
+- We can get a deeper insight into each feature's effect on the entire dataset with dependence plots. Let's see an example:
+
+```
+	shap.dependence_plot("carat", shap_values_xgb, X_train, interaction_index=None)
+```
+
+<p align="center"><img src="images/shap3.png" alt="shap3"  width="100%"></p>
+
+- This plot aligns with what we saw in the summary plot before. As carat increases, its SHAP value increases. By changing the interaction_index parameter to auto, we can color the points with a feature that most strongly interacts with carat:
+
+```
+	shap.dependence_plot("carat", shap_values_xgb, X_train, interaction_index="auto");
+```
+
+<p align="center"><img src="images/shap4.png" alt="shap4"  width="100%"></p>
+
+- It seems that the carat interacts with the clarity of the diamonds much stronger than other features.
+- Similar plots can be created for the other categorical features.
 
 ---
 
