@@ -13,7 +13,7 @@ Given a historic dataset with over 54,000 diamonds prices (`diamonds.csv`) and t
 of 5,000 diamonds, thus setting up a classic regression problem. Specificaly, the goals are:
 
 
-- to infer which characteristics are more likely to influence a diamond's price
+- to infer which characteristics are more likely to influence a diamond's price;
 - to progressively train and test a regression model until its accuracy meet a certain standard (defined by the RMSE). Rick’s goal is to obtain an average error below 900 dollars.
 
 <p align="center"><img src="images/challenge_objectives.png" alt="full"  width="60%"></p>
@@ -401,7 +401,31 @@ Since the first plot clearly points to a logarithmic relation between price and 
 <p align="center"><img src="images/shap4.png" alt="shap4"  width="100%"></p>
 
 - It seems that the carat interacts with the clarity of the diamonds much stronger than other features.
-- Similar plots can be created for the other categorical features.
+- Similar plots can be created for the other categorical features, as seen in the notebook.
+- From this information, we can already answer the first of the 2 objectives set at the beginning of the project:
+
+Objective 1: to infer which characteristics are more likely to influence a diamond's price;
+
+- Answer: If we disregard the x, y and z variables (since their effect is redundant with the carat attribute), the characteristics more likely to influence a diamond's price are,
+in order of importance: carat, clarity, color, cut, depth and table. The first 4 attributes are known in the diamond business as the **4 C's** due to their importance in gauging
+the quality of any diamond.
+
+Now to predict the prices for Ricks' diamonds!
+
+### Predicting the price of Ricks' diamonds with PyCaret
+
+- PyCaret is an open-source, low-code machine learning library and end-to-end model management tool built-in Python for automating machine learning workflows.
+- We know that the price is right-skewed, and thus we checked to see if a log transformation could make the Price attribute approximately normal to give fighting chances to algorithms that assume normality. We never actually plotted it though, let's do it now:
+
+```
+	fig = px.histogram(diamonds, x=["price_log"], title = 'Histgram of Log Price', template = 'plotly_dark')
+	fig.show()
+```
+
+- It's not exactly normal... Still, it's what we got to work with! Let's see the outcome.
+- Also, we should check what Shapiro-Wilks has to say about this!
+
+<p align="center"><img src="images/normal.png" alt="normal"  width="100%"></p>
 
 ---
 
